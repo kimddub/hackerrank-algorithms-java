@@ -1,5 +1,4 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
@@ -7,6 +6,7 @@ public class Main {
 
     static Scanner scanner = new Scanner(System.in);
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
     static StringTokenizer st;
 
     public static void main(String[] args) throws Exception {
@@ -17,9 +17,10 @@ public class Main {
 
         scanner.close();
         br.close();
+        bw.close();
     }
 
-    static void inputScanner() throws Exception {
+    static void inputScanner() {
         int n = scanner.nextInt();
         String s = scanner.nextLine();
 
@@ -31,8 +32,9 @@ public class Main {
         int n = Integer.parseInt(st.nextToken());
 
         st = new StringTokenizer(br.readLine());
-        String s = st.nextToken().toString();
+        String s = st.nextToken();
 
-        System.out.println("StringTokenizerc 입력값 : " + n + ", " + s);
+        bw.write("Scanner 입력값 : " + n + ", " + s);
+        bw.newLine();
     }
 }

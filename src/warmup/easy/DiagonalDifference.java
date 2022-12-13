@@ -1,4 +1,4 @@
-package warmup;
+package warmup.easy;
 
 import java.io.*;
 import java.util.ArrayList;
